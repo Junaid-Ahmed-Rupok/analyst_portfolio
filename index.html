@@ -397,6 +397,7 @@
       font-size: 0.75rem;
       color: var(--accent-coral);
       margin-bottom: 0.7rem;
+      letter-spacing: 0.05em;
     }
     .project-title {
       font-family: var(--font-serif);
@@ -445,10 +446,14 @@
       text-decoration: none;
       font-weight: 600;
       font-size: 0.8rem;
-      margin-top: 0.7rem;
-      display: inline-block;
+      margin-top: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: color 0.2s;
     }
     .project-link:hover {
+      color: #0b8c7e;
       text-decoration: underline;
     }
 
@@ -556,6 +561,10 @@
       padding: 1.8rem;
       text-align: center;
       box-shadow: var(--shadow-sm);
+      transition: transform 0.2s;
+    }
+    .award-card:hover {
+      transform: translateY(-3px);
     }
     .award-icon {
       font-size: 2.4rem;
@@ -621,7 +630,11 @@
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      margin-top: 0.8rem;
+      margin-top: 0.5rem;
+      transition: background 0.2s;
+    }
+    .cv-link:hover {
+      background: #d44a62;
     }
 
     footer {
@@ -675,7 +688,7 @@
           <p class="hero-title">Data Scientist & Machine Learning Engineer</p>
           <p class="hero-summary">
             Transforming complex data into strategic decisions through rigorous statistical modeling and production-ready machine learning systems. 
-            Specializing in predictive analytics, causal inference, and building explainable AI solutions.
+            Specializing in predictive analytics, causal inference, and building explainable AI solutions for real-world impact.
           </p>
           <div class="hero-actions">
             <a href="#projects" class="btn-primary">✨ View Portfolio</a>
@@ -692,7 +705,7 @@
           </div>
         </div>
         <div class="profile-image-container">
-          <!-- Replace the src with your actual image URL if different. Currently using placeholder that represents your image attachment -->
+          <!-- Profile image: replace src with your actual image URL if different -->
           <img src="https://i.ibb.co.com/VYqXQ4w/placeholder-profile.jpg" alt="Sarder Junaid Ahmed" class="profile-img" 
                onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22260%22 height=%22260%22%3E%3Ccircle cx=%22130%22 cy=%22130%22 r=%22130%22 fill=%22%23ede4ff%22/%3E%3Ctext x=%22130%22 y=%22130%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%233d2da6%22 font-size=%2228%22 font-family=%22serif%22%3ESJA%3C/text%3E%3C/svg%3E';">
         </div>
@@ -730,6 +743,7 @@
         <p class="section-subtitle">Real-world machine learning systems with measurable outcomes and rigorous validation.</p>
       </div>
       <div class="projects-grid">
+        <!-- Featured Project: Economic Status (Project 1) -->
         <div class="project-card featured-project">
           <div>
             <div class="project-index">01 / FEATURED</div>
@@ -737,33 +751,36 @@
             <p class="project-desc">Machine learning system classifying 150+ countries using World Bank indicators. Addressed high-dimensionality through principled feature selection.</p>
             <span class="metric-badge">98.3% Accuracy</span><span class="metric-badge">150+ Countries</span>
             <div class="stack"><span class="stack-item">Python</span><span class="stack-item">XGBoost</span><span class="stack-item">Scikit-learn</span></div>
-            <a href="https://github.com/Junaid-Ahmed-Rupok/economic_status" target="_blank" class="project-link">🔗 View Repository</a>
+            <a href="https://github.com/Junaid-Ahmed-Rupok/economic_status" target="_blank" rel="noopener" class="project-link">🔗 View Repository</a>
           </div>
-          <div style="background:#e8f5f3; border-radius:0.8rem; display:flex; align-items:center; justify-content:center; color:#0f6b61;">📊 Classification Report</div>
+          <div style="background:#e8f5f3; border-radius:0.8rem; display:flex; align-items:center; justify-content:center; color:#0f6b61; font-weight:500;">📊 Classification Report</div>
         </div>
+        <!-- Project 2: BD Crime Analysis -->
         <div class="project-card">
           <div class="project-index">02</div>
-          <h3 class="project-title">Political Regime Classification</h3>
-          <p class="project-desc">Statistical framework classifying governance across 127 nations using hypothesis testing with FDR correction.</p>
-          <span class="metric-badge">94% Accuracy</span>
-          <div class="stack"><span class="stack-item">Bootstrap</span><span class="stack-item">FDR Correction</span></div>
-          <a href="https://github.com/Junaid-Ahmed-Rupok/Housing-Project-" target="_blank" class="project-link">🔗 Housing Project (related)</a>
-        </div>
-        <div class="project-card">
-          <div class="project-index">03</div>
           <h3 class="project-title">Crime Classification & Fairness</h3>
           <p class="project-desc">Ensemble system for 6-class crime prediction with fairness-aware approach to class imbalance.</p>
           <span class="metric-badge">93% Accuracy</span>
           <div class="stack"><span class="stack-item">XGBoost</span><span class="stack-item">SMOTE</span></div>
-          <a href="https://github.com/Junaid-Ahmed-Rupok/BD_Crime_Analysis" target="_blank" class="project-link">🔗 BD Crime Analysis</a>
+          <a href="https://github.com/Junaid-Ahmed-Rupok/BD_Crime_Analysis" target="_blank" rel="noopener" class="project-link">🔗 BD Crime Analysis</a>
         </div>
+        <!-- Project 3: Enterprise Survey -->
         <div class="project-card">
-          <div class="project-index">04</div>
+          <div class="project-index">03</div>
           <h3 class="project-title">Enterprise Survey EDA</h3>
           <p class="project-desc">Rigorous exploratory analysis on 55,620 records across 117 industries with ANOVA validation.</p>
           <span class="metric-badge">55,620 Records</span>
           <div class="stack"><span class="stack-item">Pandas</span><span class="stack-item">Seaborn</span></div>
-          <a href="https://github.com/Junaid-Ahmed-Rupok/_Annual_EnterPriese_survey_by_Junaid_Rupok" target="_blank" class="project-link">🔗 Enterprise Survey</a>
+          <a href="https://github.com/Junaid-Ahmed-Rupok/_Annual_EnterPriese_survey_by_Junaid_Rupok" target="_blank" rel="noopener" class="project-link">🔗 Enterprise Survey</a>
+        </div>
+        <!-- Project 4: Housing Project -->
+        <div class="project-card">
+          <div class="project-index">04</div>
+          <h3 class="project-title">Housing Market Analysis</h3>
+          <p class="project-desc">Statistical modeling and prediction of housing prices with feature importance and regression diagnostics.</p>
+          <span class="metric-badge">Regression</span>
+          <div class="stack"><span class="stack-item">Python</span><span class="stack-item">Scikit-learn</span></div>
+          <a href="https://github.com/Junaid-Ahmed-Rupok/Housing-Project-" target="_blank" rel="noopener" class="project-link">🔗 Housing Project</a>
         </div>
       </div>
     </div>
@@ -849,11 +866,11 @@
         <p style="color:var(--text-secondary); margin-bottom:1.5rem;">Open to Data Scientist, ML Engineer, and Analyst roles worldwide.</p>
         <div class="contact-links">
           <a href="mailto:junaidahmedrupok@gmail.com" class="contact-link">✉️ junaidahmedrupok@gmail.com</a>
-          <a href="https://github.com/Junaid-Ahmed-Rupok" class="contact-link" target="_blank">🔗 GitHub</a>
+          <a href="https://github.com/Junaid-Ahmed-Rupok" target="_blank" rel="noopener" class="contact-link">🔗 GitHub</a>
           <a href="#" class="contact-link">🌐 Portfolio</a>
           <a href="tel:+8801718200525" class="contact-link">📞 +880 171-820-0525</a>
         </div>
-        <a href="https://drive.google.com/file/d/1HXZ_HNIGvcXJYdJqrhGmR0b_jnNQMEEd/view?usp=sharing" target="_blank" class="cv-link">📄 Download CV</a>
+        <a href="https://drive.google.com/file/d/1HXZ_HNIGvcXJYdJqrhGmR0b_jnNQMEEd/view?usp=sharing" target="_blank" rel="noopener" class="cv-link">📄 Download CV</a>
         <p style="font-size:0.9rem; color: var(--text-muted); margin-top:1.2rem;">IELTS 7.0 · Bangladeshi · Dhaka · Remote/Relocation</p>
       </div>
     </div>
