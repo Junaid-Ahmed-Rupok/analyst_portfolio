@@ -16,22 +16,23 @@
     }
 
     :root {
-      /* Elegant, engaging professional palette – deep navy, soft gold, muted teal */
-      --bg: #f9fafc;
-      --surface: #ffffff;
-      --border: #e1e7ef;
-      --border-light: #f0f3f8;
-      --text-primary: #0c1b33;
-      --text-secondary: #3a4a5c;
-      --text-muted: #5f6c80;
-      --accent-deep: #1e2f4f;
-      --accent-gold: #c49b4c;
-      --accent-teal: #2b7a6e;
-      --accent-soft-blue: #4f7aa6;
-      --accent-coral: #c85a6d;
-      --shadow-sm: 0 2px 6px rgba(0,0,0,0.04);
-      --shadow-md: 0 10px 22px rgba(0,0,0,0.06);
-      --shadow-lg: 0 18px 35px rgba(0,0,0,0.08);
+      /* Deep engaging palette – rich navy, warm amber, soft teal, no plain white */
+      --bg: #0f1724;
+      --surface: #1a2436;
+      --surface-light: #222e41;
+      --border: #2d3b4f;
+      --border-light: #334255;
+      --text-primary: #f0f3f8;
+      --text-secondary: #bcc7d6;
+      --text-muted: #8491a5;
+      --accent-deep: #e8edf5;
+      --accent-gold: #d4a853;
+      --accent-teal: #4db8a7;
+      --accent-soft-blue: #6c8fc7;
+      --accent-coral: #d47a6b;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
+      --shadow-md: 0 10px 25px rgba(0,0,0,0.4);
+      --shadow-lg: 0 18px 38px rgba(0,0,0,0.5);
       --font-serif: 'Playfair Display', Georgia, serif;
       --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
       --font-mono: 'Fira Code', 'JetBrains Mono', monospace;
@@ -54,15 +55,16 @@
       -webkit-font-smoothing: antialiased;
     }
 
+    /* subtle animated gradient overlay */
     .bg-pattern {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: radial-gradient(#dbe1e9 1px, transparent 1px);
-      background-size: 44px 44px;
-      opacity: 0.35;
+      background: radial-gradient(circle at 20% 30%, rgba(212, 168, 83, 0.06) 0%, transparent 40%),
+                  radial-gradient(circle at 80% 70%, rgba(77, 184, 167, 0.08) 0%, transparent 45%),
+                  radial-gradient(circle at 40% 80%, rgba(108, 143, 199, 0.06) 0%, transparent 40%);
       z-index: 0;
       pointer-events: none;
     }
@@ -84,13 +86,13 @@
       z-index: 50;
       padding: 0.9rem 0;
       transition: all 0.3s ease;
-      background: rgba(249, 250, 252, 0.8);
-      backdrop-filter: blur(12px);
+      background: rgba(15, 23, 36, 0.8);
+      backdrop-filter: blur(14px);
       border-bottom: 1px solid transparent;
     }
     .navbar.scrolled {
       border-bottom: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(26, 36, 54, 0.9);
       box-shadow: var(--shadow-sm);
     }
     .nav-inner {
@@ -103,7 +105,7 @@
       font-weight: 700;
       font-size: 1.7rem;
       letter-spacing: -0.02em;
-      color: var(--accent-deep);
+      color: var(--accent-gold);
       text-decoration: none;
     }
     .nav-links {
@@ -125,8 +127,8 @@
       color: var(--accent-gold);
     }
     .btn-primary {
-      background: var(--accent-deep);
-      color: white;
+      background: var(--accent-gold);
+      color: #0f1724;
       padding: 0.6rem 1.8rem;
       border-radius: 2rem;
       font-weight: 600;
@@ -139,12 +141,12 @@
       display: inline-flex;
       align-items: center;
       gap: 0.3rem;
-      box-shadow: 0 4px 10px rgba(30,47,79,0.25);
+      box-shadow: 0 4px 12px rgba(212, 168, 83, 0.3);
     }
     .btn-primary:hover {
-      background: #2a3f63;
+      background: #e0b85e;
       transform: translateY(-2px);
-      box-shadow: 0 8px 18px rgba(30,47,79,0.3);
+      box-shadow: 0 8px 20px rgba(212, 168, 83, 0.45);
     }
     .btn-outline {
       background: transparent;
@@ -161,9 +163,9 @@
       gap: 0.4rem;
     }
     .btn-outline:hover {
-      background: rgba(43,122,110,0.06);
-      border-color: #1f5f55;
-      color: #1f5f55;
+      background: rgba(77, 184, 167, 0.08);
+      border-color: #6bc4b3;
+      color: #6bc4b3;
     }
 
     /* SECTIONS */
@@ -188,7 +190,7 @@
       font-size: clamp(2.3rem, 4.5vw, 3.2rem);
       font-weight: 650;
       line-height: 1.2;
-      color: var(--accent-deep);
+      color: var(--text-primary);
       letter-spacing: -0.02em;
     }
     .section-subtitle {
@@ -224,7 +226,10 @@
       line-height: 1.1;
       letter-spacing: -0.03em;
       margin-bottom: 0.8rem;
-      color: var(--accent-deep);
+      color: var(--text-primary);
+    }
+    .hero-name span {
+      color: var(--accent-gold);
     }
     .hero-title {
       font-size: 1.25rem;
@@ -257,13 +262,13 @@
       height: 260px;
       border-radius: 50%;
       object-fit: cover;
-      border: 4px solid white;
-      box-shadow: 0 15px 35px rgba(30,47,79,0.2), 0 0 0 8px rgba(196,155,76,0.18);
-      background: #eef1f5;
+      border: 3px solid var(--accent-gold);
+      box-shadow: 0 16px 36px rgba(212, 168, 83, 0.2), 0 0 0 8px rgba(212, 168, 83, 0.08);
+      background: #1e2a3a;
       transition: transform 0.3s;
     }
     .profile-img:hover {
-      transform: scale(1.02);
+      transform: scale(1.03);
     }
 
     /* STATS */
@@ -282,7 +287,7 @@
       font-family: var(--font-serif);
       font-size: 2.2rem;
       font-weight: 700;
-      color: var(--accent-deep);
+      color: var(--accent-gold);
       line-height: 1.2;
     }
     .stat-desc {
@@ -313,8 +318,9 @@
     }
     .skill-card:hover {
       border-color: var(--accent-gold);
-      box-shadow: var(--shadow-lg);
+      box-shadow: 0 12px 28px rgba(212, 168, 83, 0.15);
       transform: translateY(-5px);
+      background: var(--surface-light);
     }
     .skill-icon {
       font-size: 2rem;
@@ -334,8 +340,8 @@
       gap: 0.4rem;
     }
     .skill-tag {
-      background: #eef1f7;
-      color: #2d3b55;
+      background: #263145;
+      color: #cfd9e6;
       padding: 0.3rem 0.9rem;
       border-radius: 2rem;
       font-size: 0.7rem;
@@ -362,14 +368,15 @@
     }
     .project-card:hover {
       box-shadow: var(--shadow-lg);
-      border-color: var(--accent-soft-blue);
+      border-color: var(--accent-teal);
+      background: var(--surface-light);
     }
     .featured-project {
       grid-column: span 2;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
-      background: #f5f7fb;
+      background: #1e2a3a;
       border-left: 5px solid var(--accent-gold);
       border-radius: var(--radius-lg);
     }
@@ -384,7 +391,7 @@
       font-size: 1.5rem;
       font-weight: 600;
       margin-bottom: 0.8rem;
-      color: var(--text-primary);
+      color: #fff;
     }
     .project-desc {
       color: var(--text-secondary);
@@ -395,12 +402,12 @@
     .metric-badge {
       display: inline-flex;
       align-items: center;
-      background: #eef1f7;
+      background: #263145;
       border-radius: 2rem;
       padding: 0.3rem 1rem;
       font-size: 0.75rem;
       font-weight: 600;
-      color: var(--accent-deep);
+      color: var(--accent-gold);
       margin-right: 0.5rem;
       margin-bottom: 0.5rem;
     }
@@ -432,6 +439,7 @@
       gap: 0.3rem;
     }
     .project-link:hover {
+      color: #7ad0bf;
       text-decoration: underline;
     }
 
@@ -454,7 +462,7 @@
       height: 15px;
       background: var(--accent-gold);
       border-radius: 50%;
-      border: 3px solid white;
+      border: 3px solid #0f1724;
       box-shadow: 0 0 0 3px var(--accent-gold);
     }
     .timeline-date {
@@ -466,7 +474,7 @@
     .timeline-role {
       font-size: 1.3rem;
       font-weight: 600;
-      color: var(--text-primary);
+      color: #fff;
     }
     .timeline-org {
       font-weight: 500;
@@ -521,8 +529,8 @@
       transition: 0.2s;
     }
     .tool-pill:hover {
-      border-color: var(--accent-deep);
-      background: #f5f6fa;
+      border-color: var(--accent-gold);
+      background: var(--surface-light);
     }
 
     /* AWARDS */
@@ -548,6 +556,7 @@
       font-weight: 600;
       font-size: 1rem;
       margin-bottom: 0.3rem;
+      color: #fff;
     }
     .award-meta {
       font-family: var(--font-mono);
@@ -577,7 +586,7 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      background: #f5f7fb;
+      background: #1e2a3a;
       border: 1px solid var(--border);
       padding: 0.6rem 1.4rem;
       border-radius: 2.5rem;
@@ -588,12 +597,12 @@
       transition: 0.25s;
     }
     .contact-link:hover {
-      background: #eef1f7;
-      border-color: var(--accent-deep);
+      background: #263245;
+      border-color: var(--accent-gold);
     }
     .cv-link {
-      background: var(--accent-deep);
-      color: white;
+      background: var(--accent-gold);
+      color: #0f1724;
       border: none;
       padding: 0.7rem 2rem;
       border-radius: 2.5rem;
@@ -606,7 +615,7 @@
       transition: background 0.2s;
     }
     .cv-link:hover {
-      background: #2a3f63;
+      background: #e0b85e;
     }
 
     footer {
@@ -656,7 +665,7 @@
     <div class="container">
       <div class="hero-grid">
         <div>
-          <h1 class="hero-name">Sarder Junaid Ahmed</h1>
+          <h1 class="hero-name">Sarder <span>Junaid</span> Ahmed</h1>
           <p class="hero-title">Data Scientist & Machine Learning Engineer</p>
           <p class="hero-summary">
             Transforming complex data into strategic decisions through rigorous statistical modeling and production-ready machine learning systems. 
@@ -678,7 +687,7 @@
         </div>
         <div class="profile-image-container">
           <img src="https://i.ibb.co.com/VYqXQ4w/placeholder-profile.jpg" alt="Sarder Junaid Ahmed" class="profile-img" 
-               onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22260%22 height=%22260%22%3E%3Ccircle cx=%22130%22 cy=%22130%22 r=%22130%22 fill=%22%23eef1f5%22/%3E%3Ctext x=%22130%22 y=%22130%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%231e2f4f%22 font-size=%2228%22 font-family=%22serif%22%3ESJA%3C/text%3E%3C/svg%3E';">
+               onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22260%22 height=%22260%22%3E%3Ccircle cx=%22130%22 cy=%22130%22 r=%22130%22 fill=%22%231e2a3a%22/%3E%3Ctext x=%22130%22 y=%22130%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23d4a853%22 font-size=%2228%22 font-family=%22serif%22%3ESJA%3C/text%3E%3C/svg%3E';">
         </div>
       </div>
     </div>
@@ -714,7 +723,6 @@
         <p class="section-subtitle">Real-world machine learning systems with measurable outcomes and rigorous validation.</p>
       </div>
       <div class="projects-grid">
-        <!-- Featured Project 1: Economic Status -->
         <div class="project-card featured-project">
           <div>
             <div class="project-index">01 / FEATURED</div>
@@ -724,9 +732,8 @@
             <div class="stack"><span class="stack-item">Python</span><span class="stack-item">XGBoost</span><span class="stack-item">Scikit-learn</span></div>
             <a href="https://github.com/Junaid-Ahmed-Rupok/economic_status" target="_blank" rel="noopener" class="project-link">🔗 View Repository</a>
           </div>
-          <div style="background:#eef2f6; border-radius:0.8rem; display:flex; align-items:center; justify-content:center; color:#1e2f4f;">📊 Classification Report</div>
+          <div style="background:#1e2a3a; border-radius:0.8rem; display:flex; align-items:center; justify-content:center; color:#d4a853;">📊 Classification Report</div>
         </div>
-        <!-- Project 2: BD Crime Analysis -->
         <div class="project-card">
           <div class="project-index">02</div>
           <h3 class="project-title">Crime Classification & Fairness</h3>
@@ -735,7 +742,6 @@
           <div class="stack"><span class="stack-item">XGBoost</span><span class="stack-item">SMOTE</span></div>
           <a href="https://github.com/Junaid-Ahmed-Rupok/BD_Crime_Analysis" target="_blank" rel="noopener" class="project-link">🔗 BD Crime Analysis</a>
         </div>
-        <!-- Project 3: Enterprise Survey -->
         <div class="project-card">
           <div class="project-index">03</div>
           <h3 class="project-title">Enterprise Survey EDA</h3>
@@ -744,7 +750,6 @@
           <div class="stack"><span class="stack-item">Pandas</span><span class="stack-item">Seaborn</span></div>
           <a href="https://github.com/Junaid-Ahmed-Rupok/_Annual_EnterPriese_survey_by_Junaid_Rupok" target="_blank" rel="noopener" class="project-link">🔗 Enterprise Survey</a>
         </div>
-        <!-- Project 4: Housing Project (separate card) -->
         <div class="project-card">
           <div class="project-index">04</div>
           <h3 class="project-title">Housing Market Analysis</h3>
