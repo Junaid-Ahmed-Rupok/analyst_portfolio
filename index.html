@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Sarder Junaid Ahmed | Data Scientist & ML Engineer</title>
-  <!-- Google Fonts: More professional mix: Inter for body, Playfair Display for distinguished headings, Fira Code for tech -->
+  <!-- Google Fonts: refined professional mix with Inter, Playfair Display, Fira Code -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,500..700;1,500..700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
   <style>
     *,
@@ -16,28 +16,30 @@
     }
 
     :root {
-      --bg: #fafbfc;
-      --surface: #ffffff;
-      --border: #e2e8f0;
-      --border-light: #f1f5f9;
-      --text-primary: #0f172a;
-      --text-secondary: #475569;
-      --text-muted: #64748b;
-      --accent: #0f172a; /* Deep slate instead of neon */
-      --accent-soft: #334155;
-      --accent-warm: #b45309; /* professional amber for highlights */
-      --accent-cool: #0369a1; /* professional blue for secondary highlights */
-      --success: #0d9488;
-      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
-      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-      --shadow-lg: 0 10px 25px -3px rgba(0, 0, 0, 0.06), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+      /* New engaging dark professional palette */
+      --bg: #0b0f17;
+      --surface: #141b25;
+      --surface-light: #1e2733;
+      --border: #2a3441;
+      --border-light: #333e4c;
+      --text-primary: #f0f4f8;
+      --text-secondary: #b9c7d8;
+      --text-muted: #7c8b9e;
+      --accent: #f0f4f8; /* soft white for primary text */
+      --accent-soft: #cbd5e1;
+      --accent-gold: #d4a853; /* professional gold for highlights */
+      --accent-blue: #3b82c4; /* rich blue for secondary accents */
+      --success: #10b981;
+      --shadow-sm: 0 2px 4px rgba(0,0,0,0.3);
+      --shadow-md: 0 8px 20px rgba(0,0,0,0.4);
+      --shadow-lg: 0 16px 32px rgba(0,0,0,0.5);
       --font-serif: 'Playfair Display', Georgia, serif;
       --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
       --font-mono: 'Fira Code', 'JetBrains Mono', monospace;
       --radius-sm: 0.5rem;
       --radius-md: 0.75rem;
-      --radius-lg: 1rem;
-      --transition: 0.2s ease;
+      --radius-lg: 1.2rem;
+      --transition: 0.25s ease;
     }
 
     html {
@@ -53,16 +55,16 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Subtle background grid instead of particles for professional look */
+    /* Subtle dotted pattern for depth */
     .bg-pattern {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
-      background-size: 40px 40px;
-      opacity: 0.4;
+      background-image: radial-gradient(#2a3441 1px, transparent 1px);
+      background-size: 44px 44px;
+      opacity: 0.25;
       z-index: 0;
       pointer-events: none;
     }
@@ -84,13 +86,13 @@
       z-index: 50;
       padding: 0.9rem 0;
       transition: all 0.3s ease;
-      background: rgba(250, 251, 252, 0.8);
-      backdrop-filter: blur(12px);
+      background: rgba(11, 15, 23, 0.8);
+      backdrop-filter: blur(14px);
       border-bottom: 1px solid transparent;
     }
     .navbar.scrolled {
       border-bottom: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(20, 27, 37, 0.9);
       box-shadow: var(--shadow-sm);
     }
     .nav-inner {
@@ -103,7 +105,7 @@
       font-weight: 700;
       font-size: 1.6rem;
       letter-spacing: -0.02em;
-      color: var(--accent);
+      color: var(--accent-gold);
       text-decoration: none;
     }
     .nav-links {
@@ -117,33 +119,34 @@
       text-decoration: none;
       font-size: 0.85rem;
       font-weight: 500;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.03em;
       transition: color 0.2s;
       text-transform: uppercase;
     }
     .nav-links a:hover {
-      color: var(--accent-warm);
+      color: var(--accent-gold);
     }
     .btn-primary {
-      background: var(--accent);
-      color: white;
+      background: var(--accent-gold);
+      color: #0b0f17;
       padding: 0.6rem 1.8rem;
       border-radius: 2rem;
       font-weight: 600;
       font-size: 0.85rem;
       text-decoration: none;
       letter-spacing: 0.03em;
-      transition: background 0.2s, transform 0.2s;
+      transition: all 0.25s;
       border: none;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
       gap: 0.3rem;
-      box-shadow: var(--shadow-sm);
+      box-shadow: 0 4px 12px rgba(212, 168, 83, 0.3);
     }
     .btn-primary:hover {
-      background: var(--accent-soft);
-      transform: translateY(-1px);
+      background: #e5be6d;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(212, 168, 83, 0.4);
     }
     .btn-outline {
       background: transparent;
@@ -154,15 +157,15 @@
       font-weight: 500;
       font-size: 0.85rem;
       text-decoration: none;
-      transition: all 0.2s;
+      transition: all 0.25s;
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
     }
     .btn-outline:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      background: #f8fafc;
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+      background: rgba(212, 168, 83, 0.08);
     }
 
     /* SECTIONS */
@@ -177,8 +180,8 @@
       font-family: var(--font-mono);
       font-size: 0.8rem;
       font-weight: 500;
-      color: var(--accent-warm);
-      letter-spacing: 0.08em;
+      color: var(--accent-gold);
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       margin-bottom: 0.5rem;
     }
@@ -223,15 +226,18 @@
       line-height: 1.1;
       letter-spacing: -0.03em;
       margin-bottom: 1rem;
-      color: var(--accent);
+      color: var(--text-primary);
+    }
+    .hero-name span {
+      color: var(--accent-gold);
     }
     .hero-title {
       font-size: 1.2rem;
       font-weight: 500;
       color: var(--text-secondary);
       margin-bottom: 1.8rem;
-      border-left: 3px solid var(--accent-warm);
-      padding-left: 1.2rem;
+      border-left: 4px solid var(--accent-gold);
+      padding-left: 1.3rem;
     }
     .hero-summary {
       color: var(--text-secondary);
@@ -246,7 +252,7 @@
       flex-wrap: wrap;
     }
 
-    /* STATS */
+    /* STATS dark panel */
     .stats-panel {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -257,12 +263,13 @@
       border-radius: var(--radius-lg);
       padding: 2rem 2.5rem;
       box-shadow: var(--shadow-md);
+      backdrop-filter: blur(4px);
     }
     .stat-value {
       font-family: var(--font-serif);
       font-size: 2.2rem;
       font-weight: 700;
-      color: var(--accent);
+      color: var(--accent-gold);
       line-height: 1.2;
     }
     .stat-desc {
@@ -287,25 +294,26 @@
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
       padding: 2rem;
-      transition: all 0.25s;
+      transition: all 0.3s;
       box-shadow: var(--shadow-sm);
     }
     .skill-card:hover {
-      border-color: #cbd5e1;
-      box-shadow: var(--shadow-lg);
-      transform: translateY(-4px);
+      border-color: var(--accent-gold);
+      box-shadow: 0 12px 24px rgba(212, 168, 83, 0.1);
+      transform: translateY(-5px);
+      background: var(--surface-light);
     }
     .skill-icon {
-      font-size: 1.8rem;
+      font-size: 2rem;
       margin-bottom: 1.2rem;
-      color: var(--accent-warm);
+      color: var(--accent-gold);
     }
     .skill-name {
       font-family: var(--font-serif);
       font-size: 1.3rem;
       font-weight: 600;
       margin-bottom: 1rem;
-      color: var(--text-primary);
+      color: #fff;
     }
     .skill-tags {
       display: flex;
@@ -313,13 +321,14 @@
       gap: 0.4rem;
     }
     .skill-tag {
-      background: #f1f5f9;
-      color: var(--text-secondary);
-      padding: 0.2rem 0.7rem;
+      background: #1f2a36;
+      color: #cfdde9;
+      padding: 0.25rem 0.8rem;
       border-radius: 2rem;
       font-size: 0.7rem;
       font-family: var(--font-mono);
       font-weight: 500;
+      border: 1px solid #2e3a48;
     }
 
     /* PROJECTS */
@@ -334,34 +343,38 @@
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
       padding: 2rem;
-      transition: 0.25s;
+      transition: 0.3s;
       box-shadow: var(--shadow-sm);
       display: flex;
       flex-direction: column;
     }
     .project-card:hover {
       box-shadow: var(--shadow-lg);
-      border-color: #cbd5e1;
+      border-color: var(--accent-blue);
+      background: var(--surface-light);
     }
     .featured-project {
       grid-column: span 2;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
-      background: #f8fafc;
-      border-left: 4px solid var(--accent-warm);
+      background: #1b2330;
+      border-left: 5px solid var(--accent-gold);
+      border-radius: var(--radius-lg);
     }
     .project-index {
       font-family: var(--font-mono);
-      font-size: 0.7rem;
-      color: var(--text-muted);
+      font-size: 0.75rem;
+      color: var(--accent-gold);
       margin-bottom: 0.7rem;
+      letter-spacing: 0.05em;
     }
     .project-title {
       font-family: var(--font-serif);
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       font-weight: 600;
       margin-bottom: 0.8rem;
+      color: #fff;
     }
     .project-desc {
       color: var(--text-secondary);
@@ -372,28 +385,29 @@
     .metric-badge {
       display: inline-flex;
       align-items: center;
-      background: #f1f5f9;
+      background: #222e3d;
       border-radius: 2rem;
-      padding: 0.2rem 0.9rem;
+      padding: 0.25rem 1rem;
       font-size: 0.75rem;
       font-weight: 600;
-      color: var(--accent-soft);
+      color: var(--accent-gold);
       margin-right: 0.6rem;
       margin-bottom: 0.5rem;
+      border: 1px solid #3a4a5a;
     }
     .stack {
       margin-top: auto;
       display: flex;
       flex-wrap: wrap;
-      gap: 0.4rem;
+      gap: 0.5rem;
       padding-top: 1rem;
       border-top: 1px solid var(--border-light);
     }
     .stack-item {
       background: transparent;
       border: 1px solid var(--border);
-      padding: 0.2rem 0.7rem;
-      border-radius: 0.3rem;
+      padding: 0.25rem 0.8rem;
+      border-radius: 0.4rem;
       font-size: 0.7rem;
       font-family: var(--font-mono);
       color: var(--text-muted);
@@ -403,7 +417,7 @@
     .timeline {
       margin-top: 2.5rem;
       position: relative;
-      padding-left: 2rem;
+      padding-left: 2.2rem;
       border-left: 2px solid var(--border);
     }
     .timeline-item {
@@ -412,25 +426,25 @@
     }
     .timeline-dot {
       position: absolute;
-      left: -2.45rem;
-      top: 0.2rem;
+      left: -2.55rem;
+      top: 0.3rem;
       width: 14px;
       height: 14px;
-      background: var(--accent);
+      background: var(--accent-gold);
       border-radius: 50%;
-      border: 2px solid white;
-      box-shadow: 0 0 0 2px var(--accent);
+      border: 2px solid #0b0f17;
+      box-shadow: 0 0 0 2px var(--accent-gold);
     }
     .timeline-date {
       font-family: var(--font-mono);
       font-size: 0.8rem;
-      color: var(--accent-warm);
+      color: var(--accent-gold);
       margin-bottom: 0.3rem;
     }
     .timeline-role {
       font-size: 1.3rem;
       font-weight: 600;
-      color: var(--text-primary);
+      color: #fff;
     }
     .timeline-org {
       font-weight: 500;
@@ -445,14 +459,14 @@
     }
     .timeline-desc li {
       margin-bottom: 0.4rem;
-      padding-left: 1.2rem;
+      padding-left: 1.3rem;
       position: relative;
     }
     .timeline-desc li::before {
       content: "▹";
       position: absolute;
       left: 0;
-      color: var(--accent-warm);
+      color: var(--accent-gold);
     }
 
     /* TOOLS */
@@ -466,8 +480,8 @@
       font-family: var(--font-mono);
       font-size: 0.8rem;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--text-muted);
+      letter-spacing: 0.07em;
+      color: var(--accent-gold);
       margin-bottom: 1rem;
     }
     .tool-pills {
@@ -478,7 +492,7 @@
     .tool-pill {
       background: var(--surface);
       border: 1px solid var(--border);
-      padding: 0.4rem 1rem;
+      padding: 0.4rem 1.1rem;
       border-radius: 2rem;
       font-size: 0.8rem;
       font-weight: 500;
@@ -486,8 +500,8 @@
       transition: 0.2s;
     }
     .tool-pill:hover {
-      border-color: var(--accent);
-      background: #f8fafc;
+      border-color: var(--accent-gold);
+      background: #1f2a36;
     }
 
     /* AWARDS */
@@ -504,15 +518,21 @@
       padding: 1.8rem;
       text-align: center;
       box-shadow: var(--shadow-sm);
+      transition: 0.25s;
+    }
+    .award-card:hover {
+      border-color: var(--accent-gold);
+      background: #1c2532;
     }
     .award-icon {
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-bottom: 0.7rem;
     }
     .award-title {
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 1rem;
       margin-bottom: 0.3rem;
+      color: #fff;
     }
     .award-meta {
       font-family: var(--font-mono);
@@ -527,7 +547,7 @@
       border-radius: var(--radius-lg);
       padding: 3rem;
       text-align: center;
-      max-width: 700px;
+      max-width: 720px;
       margin: 0 auto;
       box-shadow: var(--shadow-md);
     }
@@ -536,25 +556,26 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 1rem;
-      margin: 2rem 0 1.5rem;
+      margin: 2.2rem 0 1.5rem;
     }
     .contact-link {
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      background: #f8fafc;
+      background: #1b2431;
       border: 1px solid var(--border);
-      padding: 0.6rem 1.3rem;
+      padding: 0.6rem 1.4rem;
       border-radius: 2rem;
       text-decoration: none;
       color: var(--text-primary);
       font-weight: 500;
       font-size: 0.9rem;
-      transition: 0.2s;
+      transition: 0.25s;
     }
     .contact-link:hover {
-      background: white;
-      border-color: var(--accent);
+      background: #232e3d;
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
     }
 
     footer {
@@ -604,7 +625,7 @@
     <div class="container">
       <div class="hero-grid">
         <div>
-          <h1 class="hero-name">Sarder Junaid Ahmed</h1>
+          <h1 class="hero-name">Sarder <span>Junaid</span> Ahmed</h1>
           <p class="hero-title">Data Scientist & Machine Learning Engineer</p>
           <p class="hero-summary">
             Transforming complex data into strategic decisions through rigorous statistical modeling and production-ready machine learning systems. 
@@ -625,8 +646,8 @@
           </div>
         </div>
         <div style="display: flex; justify-content: center;">
-          <div style="width: 280px; height: 280px; border-radius: 50%; background: #f1f5f9; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border);">
-            <span style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--accent);">DS•ML</span>
+          <div style="width: 280px; height: 280px; border-radius: 50%; background: #1e293b; display: flex; align-items: center; justify-content: center; border: 2px solid var(--accent-gold); box-shadow: 0 0 30px rgba(212,168,83,0.2);">
+            <span style="font-family: var(--font-serif); font-size: 2rem; color: var(--accent-gold); font-weight: 600;">DS•ML</span>
           </div>
         </div>
       </div>
@@ -643,12 +664,12 @@
         <p class="section-subtitle">A full-stack data science skillset grounded in statistical rigor and engineering best practices.</p>
       </div>
       <div class="skills-grid">
-        <div class="skill-card"><div class="skill-icon">🧠</div><div class="skill-name">Machine Learning</div><div class="skill-tags"><span>XGBoost</span><span>Ensemble Methods</span><span>Feature Engineering</span><span>Scikit-learn</span><span>Cross-Validation</span></div></div>
-        <div class="skill-card"><div class="skill-icon">📊</div><div class="skill-name">Statistical Analysis</div><div class="skill-tags"><span>Hypothesis Testing</span><span>Bayesian Inference</span><span>Causal Inference</span><span>FDR Correction</span><span>ANOVA</span></div></div>
-        <div class="skill-card"><div class="skill-icon">🔬</div><div class="skill-name">Deep Learning</div><div class="skill-tags"><span>TensorFlow</span><span>PyTorch</span><span>Neural Networks</span><span>Model Optimization</span></div></div>
-        <div class="skill-card"><div class="skill-icon">🗄️</div><div class="skill-name">Data Engineering</div><div class="skill-tags"><span>Python</span><span>SQL</span><span>Docker</span><span>Data Pipelines</span><span>EDA</span></div></div>
-        <div class="skill-card"><div class="skill-icon">📈</div><div class="skill-name">Visualization</div><div class="skill-tags"><span>Matplotlib</span><span>Seaborn</span><span>Plotly</span><span>Dashboard Design</span></div></div>
-        <div class="skill-card"><div class="skill-icon">⚙️</div><div class="skill-name">Research & Dev Tools</div><div class="skill-tags"><span>Git</span><span>Linux</span><span>Jupyter</span><span>LaTeX</span><span>Reproducibility</span></div></div>
+        <div class="skill-card"><div class="skill-icon">🧠</div><div class="skill-name">Machine Learning</div><div class="skill-tags"><span>XGBoost</span><span>Ensemble Methods</span><span>Feature Engineering</span><span>Scikit-learn</span></div></div>
+        <div class="skill-card"><div class="skill-icon">📊</div><div class="skill-name">Statistical Analysis</div><div class="skill-tags"><span>Hypothesis Testing</span><span>Bayesian Inference</span><span>Causal Inference</span><span>FDR Correction</span></div></div>
+        <div class="skill-card"><div class="skill-icon">🔬</div><div class="skill-name">Deep Learning</div><div class="skill-tags"><span>TensorFlow</span><span>PyTorch</span><span>Neural Networks</span></div></div>
+        <div class="skill-card"><div class="skill-icon">🗄️</div><div class="skill-name">Data Engineering</div><div class="skill-tags"><span>Python</span><span>SQL</span><span>Docker</span><span>Data Pipelines</span></div></div>
+        <div class="skill-card"><div class="skill-icon">📈</div><div class="skill-name">Visualization</div><div class="skill-tags"><span>Matplotlib</span><span>Seaborn</span><span>Plotly</span></div></div>
+        <div class="skill-card"><div class="skill-icon">⚙️</div><div class="skill-name">Research & Tools</div><div class="skill-tags"><span>Git</span><span>Linux</span><span>Jupyter</span><span>LaTeX</span></div></div>
       </div>
     </div>
   </section>
@@ -667,11 +688,11 @@
           <div>
             <div class="project-index">01 / FEATURED</div>
             <h3 class="project-title">Economic Development Classifier</h3>
-            <p class="project-desc">Machine learning system classifying 150+ countries using World Bank indicators. Addressed high-dimensionality through principled feature selection and validation beyond standard splits.</p>
+            <p class="project-desc">Machine learning system classifying 150+ countries using World Bank indicators. Addressed high-dimensionality through principled feature selection.</p>
             <span class="metric-badge">98.3% Accuracy</span><span class="metric-badge">150+ Countries</span>
             <div class="stack"><span class="stack-item">Python</span><span class="stack-item">XGBoost</span><span class="stack-item">Scikit-learn</span></div>
           </div>
-          <div style="background:#f1f5f9; border-radius:0.5rem; display:flex; align-items:center; justify-content:center;">📊 Classification Report</div>
+          <div style="background:#1f2a36; border-radius:0.8rem; display:flex; align-items:center; justify-content:center; color:var(--accent-gold);">📊 Classification Report</div>
         </div>
         <div class="project-card">
           <div class="project-index">02</div>
@@ -797,7 +818,6 @@
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 40);
   });
-  // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
